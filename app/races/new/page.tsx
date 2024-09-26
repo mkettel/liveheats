@@ -99,8 +99,8 @@ export default function NewRace() {
                   required
                   min="1"
                 />
-                <Button type="button" onClick={() => removeStudent(index)} variant='destructive'>
-                  Remove
+                <Button type="button" onClick={() => removeStudent(index)} variant='destructive' className='font-bold'>
+                  X
                 </Button>
               </div>
             ))}
