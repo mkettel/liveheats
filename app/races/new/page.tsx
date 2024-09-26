@@ -5,9 +5,10 @@ import { Student, Race } from '@/app/types'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
-import { AlertCircle } from 'lucide-react'
+import { AlertCircle, Car } from 'lucide-react'
+import { Separator } from '@/components/ui/separator'
 
 export default function NewRace() {
   const [students, setStudents] = useState<Student[]>([{ name: '', lane: 1 }])
@@ -62,9 +63,18 @@ export default function NewRace() {
         <Link href="/" className="mb-4 inline-block"> &larr; Back to Home</Link>
       </Button>
       <Card className="mt-4">
-        <CardHeader>
+        <CardHeader className='pb-2'>
           <CardTitle className='text-2xl'>Create New Race</CardTitle>
         </CardHeader>
+        <CardContent>
+          <CardDescription className='w-[60%]'>
+            Create a new race by adding the <span className=' font-bold underline'>race name</span>, each of the the <span className=' font-bold underline'>student name</span> and <span className=' font-bold underline'>lane number</span> that will be competing. <br />
+          </CardDescription>
+          <CardDescription className='w-[60%] my-3 flex gap-1 items-center'>
+            <AlertCircle className='h-4 w-4' /> Make sure that you add at least two students before creating the race. 
+          </CardDescription>
+          <Separator />
+        </CardContent>
         <CardContent>
         {error && (
             <Alert variant="destructive" className="mb-4">

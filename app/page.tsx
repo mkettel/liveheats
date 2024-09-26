@@ -10,14 +10,14 @@ export default function Home() {
         <ul className="flex space-x-4">
           <li>
             <Button asChild>
-              <Link href="/races/new" className="text-blue-500 ">
+              <Link href="/races/new" className=" ">
                 Create New Race
               </Link>
             </Button>
           </li>
           <li>
             <Button asChild variant='secondary' >
-              <Link href="/races" className="text-blue-500 ">
+              <Link href="/races" className=" ">
                 View All Races
               </Link>
             </Button>
